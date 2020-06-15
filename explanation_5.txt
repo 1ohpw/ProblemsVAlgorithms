@@ -1,0 +1,42 @@
+Here the task is to use a Trie to implement autocomplete, since they are great for
+efficiently retrieving data based on prefixes.
+
+TrieNode
+
+Insert
+_________________________________
+I use a HashMap/dicitonary to store the children of a TrieNode,
+so inserting a child character can be done in constant/O(1) time. 
+
+Space is also constant since one TrieNode containing a character will be inserted every time.
+
+Suffixes
+_________________________________
+To get suffixes for a node, I recursively find the full words coming from that node and its children.
+
+The time/space complexity is O(n*m) where n is the number of nodes from the input node and m is the number
+of nodes each of its children has, since I must traverse these to get all suffixes. 
+
+___________________________________________________
+Trie
+
+Insert
+_________________________________
+Since I need to iterate through the characters of the input word to
+do this, it takes linear/O(n) time where n is the length of the word.
+However the runtime is constant/O(1) with respect to the size of the Trie
+itself, since it will take the same amount of time to insert a new word
+independent of the number of nodes in the Trie.
+
+The space is linear/O(n) where n is the length of the new word since, in the
+worst case, a new node will need to be created and inserted for every character.
+
+Find
+_________________________________
+The runtime here is the same as insertion. Linear time considering the length of
+the word, and constant time considering the size of/number of nodes in the Trie.
+
+Space is constant/O(1).
+
+_______________________________________________________
+

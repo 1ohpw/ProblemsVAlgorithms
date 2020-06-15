@@ -1,0 +1,8 @@
+My sqrt function is basically a search for the lower and upper bounded whole numbers
+that the target's square root is between. I return the lower bound which is either the
+exact square root, or the floored square root. 
+
+Since I am searching for this in the ordered range from 0 to the target, I can use binary search. 
+This gives my function a logarithmic time complexity/O(log n).
+
+I use constant/O(1) space.

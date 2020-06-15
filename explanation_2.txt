@@ -1,0 +1,9 @@
+In this problem, I want to use binary search since I know the array is sorted, though rotated.
+So first I use binary search to find the index of the pivot it is rotated on. Using the knowledge
+of this index, I can then do a normal binary search for the target in the correct portion
+of the input list (portion before the pivot, or portion from the pivot to the end of the list). 
+
+Since I do two consecutive binary searches, the runtime of this is logarithmic 
+(reduces to O(log n)).
+
+The space complexity is constant/O(1).

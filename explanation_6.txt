@@ -1,0 +1,5 @@
+To find the minimum and maximum element, I iterate through the list once and update the 
+min and max variables as needed. Due to this iteration, the time complexity is linear/O(n)
+where n is the length of the input list.
+
+The space complexity is constant/O(1) since two integers will use the same amount of memory.

@@ -1,0 +1,12 @@
+To start this problem, I sort the input list in descending order. Then I build the two maximum 
+numbers by using the consecutive even-indexed digits as the first number, and the consecutive
+odd-indexed digits as the second number. 
+
+To sort I used a altered merge sort to sort the list instead from greatest to least value. Merge sort 
+takes linearithmic/O(n log n) time. Afterward, I take linear/O(n) time to iterate through the 
+input list (building the maximum numbers). This will reduce to an total estimated complexity of O(n log n).
+
+The merge sort has a linear/O(n) space complexity. Though it creates many arrays at each recursive step, only
+a linear amount at the most will coexist at any given time. 
+The size of the integers returned is constant/O(1) since they will use the same amount of memory.
+So the total estimated space complexity is O(n).

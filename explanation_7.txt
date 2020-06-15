@@ -1,0 +1,63 @@
+RouteTrieNode
+
+Insert
+_________________________________
+I use a HashMap/dicitonary to store the children of a TrieNode,
+so inserting a child character can be done in constant/O(1) time. 
+
+Space is O(n) where n is the size of the path string being inserted into the RouteTrieNode.
+
+Get Handler
+_________________________________
+Getting the handler from the RouteTrieNode is just retrieving the value of an instance variable,
+so this is done in constant/O(1) time and space.
+
+Set Handler
+_________________________________
+Setting the handler from the RouteTrieNode is just storing a value in an instance variable,
+so this is done in constant/O(1) time.
+
+Space is O(n) where n is the size of the handler string being stored.
+__________________________________________________________________________
+
+
+RouteTrie
+
+
+Insert
+_________________________________
+Since I need to iterate through the parts of the path to
+do this, it takes linear/O(n) time where n is the number of parts (separated by "/").
+However the runtime is constant/O(1) with respect to the size of the RouteTrie
+itself, since it will take the same amount of time to insert a new path part
+independent of the number of nodes in the RouteTrie.
+
+The space is O(n*m) where n is the number of the path parts being inserted (in the
+worst case, a new node will need to be created and inserted for every path), and m is the 
+size of each path part string.
+
+Find
+_________________________________
+The runtime here is the same as insertion. Linear time considering the number of
+path parts, and constant time considering the size of/number of nodes in the RouteTrie.
+
+Space is constant/O(1).
+_______________________________________________________
+
+
+Router
+
+Add Handler
+_________________________________
+This is just a wrapper for the RouteTrie insert method, so it takes linear time considering the number of
+path parts (separated by "/"), and constant time considering the size of/number of nodes in the RouteTrie.
+
+The space is O(n*m) where n is the number of the path parts being inserted, and m is the 
+size of each path part string.
+
+Lookup
+_________________________________
+This is just a wrapper for the RouteTrie find method, so it takes linear time considering the number of
+path parts (separated by "/"), and constant time considering the size of/number of nodes in the RouteTrie.
+
+Space is constant/O(1).
