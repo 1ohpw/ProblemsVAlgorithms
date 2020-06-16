@@ -1,4 +1,6 @@
 def sqrt(number):
+   if number < 0:
+      raise ValueError("number must be non-negative")
 
    def sqrt_helper(left, right):
       if left > right:
@@ -44,3 +46,7 @@ print(sqrt(1))
 #Test Case 7
 print(sqrt(1000000))
 #expected: 1000
+
+#Test Case 8
+print(sqrt(-4))
+#expected: ValueError: number must be non-negative

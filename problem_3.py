@@ -55,21 +55,26 @@ def test_function(test_case):
 
 #Test Case 1
 test_case_1 = [[1, 2, 3, 4, 5], [542, 31]]
-#test_function(test_case_1)
+test_function(test_case_1)
 #expected: Pass
 
 #Test Case 2
 test_case_2 = [[4, 6, 2, 5, 9, 8], [964, 852]]
-#test_function(test_case_2)
+test_function(test_case_2)
 #expected: Pass
 
 #Test Case 3
 test_case_3 = [[1, 2], [1, 2]]
-#test_function(test_case_3)
+test_function(test_case_3)
 #expected: Pass
 
 #Test Case 4
 test_case_4 = [[0], [0, 0]]
-#test_function(test_case_4)
+test_function(test_case_4)
+#expected: Pass
+
+#Test Case 5
+test_case_5 = [[], [0, 0]]
+test_function(test_case_5)
 #expected: Pass
 

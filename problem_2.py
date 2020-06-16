@@ -29,6 +29,9 @@ def rotated_array_search(input_list, number):
     Returns:
        int: Index or -1
     """
+    if len(input_list) == 0:
+        return -1
+        
     pivot = find_pivot(input_list, 0, len(input_list) - 1)
     left = 0
     right = len(input_list) - 1
@@ -44,38 +47,43 @@ def rotated_array_search(input_list, number):
 
 #Test Case 1
 test_list_1 = [6, 7, 8, 9, 10, 1, 2, 3, 4]
-#print(rotated_array_search(test_list_1, 6))
+print(rotated_array_search(test_list_1, 6))
 #expected: 0
 
 #Test Case 2
-#print(rotated_array_search(test_list_1, 1))
+print(rotated_array_search(test_list_1, 1))
 #expected: 5
 
 #Test Case 3
 test_list_2 = [6, 7, 8, 1, 2, 3, 4]
-#print(rotated_array_search(test_list_2, 8))
+print(rotated_array_search(test_list_2, 8))
 #expected: 2
 
 #Test Case 4
-#print(rotated_array_search(test_list_2, 1))
+print(rotated_array_search(test_list_2, 1))
 #expected: 3
 
 #Test Case 5
-#print(rotated_array_search(test_list_2, 10))
+print(rotated_array_search(test_list_2, 10))
 #expected: -1
 
 #Test Case 6
 test_list_3 = [999999999, 1, 2, 3, 4]
-#print(rotated_array_search(test_list_3, 999999999))
+print(rotated_array_search(test_list_3, 999999999))
 #expected: 0
 
 #Test Case 7
 test_list_4 = [1]
-#print(rotated_array_search(test_list_4, 1))
+print(rotated_array_search(test_list_4, 1))
 #expected: 0
 
 #Test Case 7
 test_list_5 = [4001, 4000]
-#print(rotated_array_search(test_list_5, 4000))
+print(rotated_array_search(test_list_5, 4000))
 #expected: 1
+
+#Test Case 8
+test_list_8 = []
+print(rotated_array_search(test_list_8, 4))
+#expected: -1
 

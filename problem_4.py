@@ -32,32 +32,32 @@ def test_function(test_case):
         print("Fail")
 
 #Test Case 1
-#test_function([0, 0, 2, 2, 2, 1, 1, 1, 2, 0, 2])
+test_function([0, 0, 2, 2, 2, 1, 1, 1, 2, 0, 2])
 #expected: [0, 0, 0, 1, 1, 1, 2, 2, 2, 2, 2]
 #expected: Pass
 
 #Test Case 2
-#test_function([2, 1, 2, 0, 0, 2, 1, 0, 1, 0, 0, 2, 2, 2, 1, 2, 0, 0, 0, 2, 1, 0, 2, 0, 0, 1])
+test_function([2, 1, 2, 0, 0, 2, 1, 0, 1, 0, 0, 2, 2, 2, 1, 2, 0, 0, 0, 2, 1, 0, 2, 0, 0, 1])
 #expected: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2]
 #expected: Pass
 
 #Test Case 3
-#test_function([0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2])
+test_function([0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2])
 #expected: [0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2]
 #expected: Pass
 
 #Test Case 4
-#test_function([2, 1, 0])
+test_function([2, 1, 0])
 #expected: [0, 1, 2]
 #expected: Pass
 
 #Test Case 5
-#test_function([1])
+test_function([1])
 #expected: [1]
 #expected: Pass
 
 #Test Case 6
-#test_function([])
+test_function([])
 #expected: []
 #expected: Pass
 

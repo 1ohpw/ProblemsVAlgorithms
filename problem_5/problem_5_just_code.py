@@ -62,30 +62,30 @@ test_trie_1.insert("supercalifragilisticexpialidocious")
 
 #Test Case 1
 test_node_1 = test_trie_1.find("f")
-# print(test_node_1.suffixes())
+print(test_node_1.suffixes())
 #expected: ['un', 'unction', 'actory']
 
 #Test Case 2
 test_node_2 = test_trie_1.find("fu")
-#print(test_node_2.suffixes())
+print(test_node_2.suffixes())
 #expected: ['n', 'nction']
 
 #Test Case 3
 test_node_3 = test_trie_1.find("fa")
-# print(test_node_3.suffixes())
+print(test_node_3.suffixes())
 #expected: ['ctory']
 
 #Test Case 4
 test_node_4 = test_trie_1.find("gang")
-#print(test_node_4.suffixes())
+print(test_node_4.suffixes())
 #expected: ['ster']
 
 #Test Case 5
 test_node_5 = test_trie_1.find("supercalifragilisticexpialidociou")
-# print(test_node_5.suffixes())
+print(test_node_5.suffixes())
 #expected: ['s']
 
 #Test Case 6
 test_node_6 = test_trie_1.find("s")
-#print(test_node_6.suffixes())
+print(test_node_6.suffixes())
 #expected: ['uper', 'upercalifragilisticexpialidocious']

@@ -57,33 +57,33 @@ router.add_handler("/home/contact", "contact handler")
 router.add_handler("/shop/", "shop handler") 
 
 #Test Case 1
-#print(router.lookup("/")) 
+print(router.lookup("/")) 
 #expected: root handler
 
 #Test Case 2
-#print(router.lookup("/home")) 
+print(router.lookup("/home")) 
 #expected: not found handler
 
 #Test Case 3
-#print(router.lookup("/home/about")) 
+print(router.lookup("/home/about")) 
 #expected: about handler
 
 #Test Case 4
-#print(router.lookup("/home/about/")) 
+print(router.lookup("/home/about/")) 
 #expected: about handler
 
 #Test Case 5
-#print(router.lookup("/home/about/me")) 
+print(router.lookup("/home/about/me")) 
 #expected: me handler
 
 #Test Case 6
-#print(router.lookup("/home/contact"))
+print(router.lookup("/home/contact"))
 #expected: contact handler
 
 #Test Case 7
-#print(router.lookup("shop"))
+print(router.lookup("shop"))
 #expected: shop handler
 
 #Test Case 7
-#print(router.lookup("home/contact/myspace"))
+print(router.lookup("home/contact/myspace"))
 #expected: not found handler
