@@ -3,7 +3,8 @@ RouteTrieNode
 Insert
 _________________________________
 I use a HashMap/dicitonary to store the children of a TrieNode,
-so inserting a child character can be done in constant/O(1) time. 
+so inserting a child character can be done in constant/O(1) time on average,
+and O(n) in the worst case. 
 
 Space is O(n) where n is the size of the path string being inserted into the RouteTrieNode.
 
@@ -26,8 +27,10 @@ RouteTrie
 
 Insert
 _________________________________
-Since I need to iterate through the parts of the path to
-do this, it takes linear/O(n) time where n is the number of parts (separated by "/").
+Iterating through the parts of the path takes linear/O(n) time, 
+where n is the number of parts (separated by "/"). Inserting into the children dicitonary
+takes constant time/O(1) on average, and linear/O(m) time in the worst case. So the total
+runtime is O(n) on average, and O(n*m) in the worst case.
 However the runtime is constant/O(1) with respect to the size of the RouteTrie
 itself, since it will take the same amount of time to insert a new path part
 independent of the number of nodes in the RouteTrie.
@@ -38,8 +41,7 @@ size of each path part string.
 
 Find
 _________________________________
-The runtime here is the same as insertion. Linear time considering the number of
-path parts, and constant time considering the size of/number of nodes in the RouteTrie.
+The runtime here is the same as insertion (see above).
 
 Space is constant/O(1).
 _______________________________________________________
@@ -57,7 +59,7 @@ size of each path part string.
 
 Lookup
 _________________________________
-This is just a wrapper for the RouteTrie find method, so it takes linear time considering the number of
-path parts (separated by "/"), and constant time considering the size of/number of nodes in the RouteTrie.
+This is just a wrapper for the RouteTrie find method (see above), so it takes O(n) time on average and O(n*m)
+time in the worst case.
 
 Space is constant/O(1).

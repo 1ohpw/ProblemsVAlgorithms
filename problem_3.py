@@ -26,6 +26,9 @@ def backwards_merge_sort(input_list):
 
     return merge(left, right)
 
+def parse_int(s):
+    return int(s) if s else 0
+
 def rearrange_digits(input_list):
     """
     Rearrange Array Elements so as to form two number such that their sum is maximum.
@@ -36,14 +39,15 @@ def rearrange_digits(input_list):
        (int),(int): Two maximum sums
     """
     backwards_sorted_list = backwards_merge_sort(input_list)
-    n = 0
-    m = 0
+    n = ""
+    m = ""
     for i, num in enumerate(backwards_sorted_list):
         if i % 2 == 0:
-            n = n * 10 + num
+            n += str(num)
         else:
-            m = m * 10 + num
-    return (n, m)
+            m += str(num)
+    
+    return (parse_int(n), parse_int(m))
 
 def test_function(test_case):
     output = rearrange_digits(test_case[0])
@@ -78,3 +82,5 @@ test_case_5 = [[], [0, 0]]
 test_function(test_case_5)
 #expected: Pass
 
+#edge case 2: large set and large numbers
+test_function([[i for i in range(0,101)], [int("".join(map(str,range(100,-1,-2)))), int("".join(map(str,range(99,-1,-2))))]])

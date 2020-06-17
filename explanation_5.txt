@@ -6,24 +6,29 @@ TrieNode
 Insert
 _________________________________
 I use a HashMap/dicitonary to store the children of a TrieNode,
-so inserting a child character can be done in constant/O(1) time. 
+so inserting a child character can be done in constant/O(1) time on average,
+and linear/O(n) time in the worst case. 
 
 Space is also constant since one TrieNode containing a character will be inserted every time.
 
 Suffixes
 _________________________________
-To get suffixes for a node, I recursively find the full words coming from that node and its children.
+To get suffixes for a node, I recursively find the full words coming from that node (n) and its children (m).
 
-The time/space complexity is O(n*m) where n is the number of nodes from the input node and m is the number
-of nodes each of its children has, since I must traverse these to get all suffixes. 
+Time complexity is O(n^m) due to the recursive step being inside of the for loop.
 
+Space is O(n) where n is the number of possible suffixes/words in the Trie.
 ___________________________________________________
 Trie
 
 Insert
 _________________________________
-Since I need to iterate through the characters of the input word to
+Iterting through the characters of the input word to
 do this, it takes linear/O(n) time where n is the length of the word.
+Inserting into the node's dictionary takes constant/O(1) time in the average case, and
+linear/O(m) time in the worst case. So the total complexity is O(n) on average, and 
+O(n*m) in the worst case.
+
 However the runtime is constant/O(1) with respect to the size of the Trie
 itself, since it will take the same amount of time to insert a new word
 independent of the number of nodes in the Trie.
@@ -33,8 +38,7 @@ worst case, a new node will need to be created and inserted for every character.
 
 Find
 _________________________________
-The runtime here is the same as insertion. Linear time considering the length of
-the word, and constant time considering the size of/number of nodes in the Trie.
+The runtime here is the same as insertion (see above)
 
 Space is constant/O(1).
 
